@@ -184,5 +184,35 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "stickyNavigation",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stickyNavTitle",
+        "label": "Title",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "navlink",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stickyTitle",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "stickyLink",
+        "label": "Link"
+      }
+    ]
   }
 ]
