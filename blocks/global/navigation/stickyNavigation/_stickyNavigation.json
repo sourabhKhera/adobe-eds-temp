@@ -1,0 +1,75 @@
+{
+    "definitions": [
+      {
+        "title": "B007-StickyNavigation",
+        "id": "stickyNavigation",
+        "plugins": {
+          "xwalk": {
+            "page": {
+              "resourceType": "core/franklin/components/block/v1/block",
+              "template": {
+                "name": "B007-StickyNavigation",
+                "model": "stickyNavigation",
+                "filter" : "stickyNavigation"
+              }
+            }
+          }
+        }
+      },
+      {
+        "title": "Link",
+        "id": "navlink",
+        "plugins": {
+          "xwalk": {
+            "page": {
+              "resourceType": "core/franklin/components/block/v1/block/item",
+              "template": {
+                "name": "Link",
+                "model": "navlink"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "models": [
+      {
+        "id": "stickyNavigation",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "stickyNavTitle",
+            "label": "Title",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "navlink",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "stickyTitle",
+            "label": "Title",
+            "value": ""
+          },
+          {
+            "component": "aem-content",
+            "valueType": "string",
+            "name": "stickyLink",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "filters": [
+      {
+        "id": "stickyNavigation",
+        "components": [
+          "navlink"
+        ]
+      }
+    ]
+  }

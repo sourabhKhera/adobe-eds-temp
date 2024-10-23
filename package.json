@@ -11,6 +11,10 @@
     "build:json:models": "merge-json-cli -i \"models/_component-models.json\" -o \"component-models.json\"",
     "build:json:definitions": "merge-json-cli -i \"models/_component-definition.json\" -o \"component-definition.json\"",
     "build:json:filters": "merge-json-cli -i \"models/_component-filters.json\" -o \"component-filters.json\"",
+    "build:json:global": "npm-run-all -p build:json:global:models build:json:global:definitions build:json:global:filters",
+    "build:json:global:models": "merge-json-cli -i \"blocks/global/component-models-global.json\" -o \"component-models.json\"",
+    "build:json:global:definitions": "merge-json-cli -i \"blocks/global/component-definition-global.json\" -o \"component-definition.json\"",
+    "build:json:global:filters": "merge-json-cli -i \"blocks/global/component-filters-global.json\" -o \"component-filters.json\"",
     "prepare": "husky"
   },
   "repository": {
